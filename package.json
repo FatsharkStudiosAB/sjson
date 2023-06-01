@@ -4,6 +4,7 @@
   "description": "A parser that converts SJSON into JSON",
   "license": "Apache-2.0",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "mocha"
   },

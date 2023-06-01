@@ -1,3 +1,4 @@
+Copyright 2023 Fatshark Studios AB https://www.fatshark.se/
 Copyright 2016 Autodesk Inc. http://www.autodesk.com
 
 Licensed under the Apache License, Version 2.0 (the "License");
