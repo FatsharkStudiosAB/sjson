@@ -39,9 +39,9 @@ class SJSON {
         if (s[i] === 47) { // "/"
           ++i;
           if (s[i] === 47)
-            while (s[++i] !== 10); // "\n"
+            while (i+1 < s.length && s[++i] !== 10); // "\n"
           else if (s[i] === 42) // "*"
-            while (s[++i] !== 42);
+            while (i+1 < s.length && s[++i] !== 42);
         } else if (!hasChar(WHITESPACE, s[i])) {
           break;
         }
