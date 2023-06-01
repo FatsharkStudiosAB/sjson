@@ -282,9 +282,8 @@ class SJSON {
 
     function sobj(obj) {
       let s = '{';
-      let k;
       nbTabs++; //indentation
-      for(k in obj) {
+      for (let k of Object.keys(obj).sort()) {
         s += endLine() + getObjKey(k) + ' = ' + svalue(obj[k]);
       }
       nbTabs--; //end indentation
@@ -311,8 +310,7 @@ class SJSON {
       //If the root is an object loop through key here to not add '{ }' and indentation
       if(typeof r === 'object' && !Array.isArray(r)) {
         let s = '';
-        let k;
-        for(k in r) {
+        for (let k of Object.keys(r).sort()) {
           s += getObjKey(k) + ' = ' + svalue(r[k]) + endLine();
         }
         return s;
